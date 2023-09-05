@@ -1,15 +1,15 @@
 package com.gittest.gittest;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+@Controller
 public class IndexController {
 
-    @GetMapping("/")
+    @RequestMapping(value = "/")
     public String index(Model model) {
-
-        model.addAttribute("test", "CI");
-
+        model.addAttribute("str", "CI");
         return "index.html";
     }
 }
